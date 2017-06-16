@@ -57,6 +57,10 @@ Quick and easy install script provided by Docker:
 
 ```
 curl -sSL https://get.docker.com/ | sh
+sudo service docker stop
+sudo usermod -aG docker <username>
+nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &
+docker info
 ```
 
 If you're not willing to run a random shell script, please see the [installation](https://docs.docker.com/engine/installation/linux/) instructions for your distribution.
